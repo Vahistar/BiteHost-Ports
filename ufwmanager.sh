@@ -2,14 +2,14 @@
 
 # Sprawdzenie czy skrypt uruchomiony jako root, jeśli nie to przeładuj przez sudo (interaktywnie)
 if [[ $EUID -ne 0 ]]; then
-  echo "# ⏳ Podnoszę uprawnienia do root przez sudo..."
+  echo "⏳ Podnoszę uprawnienia do root przez sudo..."
   exec sudo -E "$0" "$@"
 fi
 
 # Sprawdzenie czy dialog jest zainstalowany
 if ! command -v dialog &>/dev/null; then
-  echo "❌ Proszę zainstalować 'dialog' (np. sudo apt-get install dialog) i uruchomić ponownie."
-  apt install dialog -y
+  echo "❌ Nie znaleziono pakietu 'dialog'. Instaluje..."
+  apt install dialog -y > /dev/null 2>&1
 fi
 
 # Ustaw logo jako zmienną
