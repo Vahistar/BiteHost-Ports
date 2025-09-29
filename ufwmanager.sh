@@ -31,7 +31,7 @@ cat <<'EOF' > /tmp/logo.txt
  \$$$$$$$  \$$    \$$$$   \$$$$$$$ \$$   \$$  \$$$$$$  \$$$$$$$     \$$$$
     
 🚀 CLI - UFW Manager [v1.0]
-by Vahistar & TheWolfless
+by Vahistar
 EOF
 
 # Wyświetl logo w oknie dialogu
